@@ -21,9 +21,12 @@ module Sequel
       end
     end
 
+    alias_method :original_log_duration, :log_duration
+
     def log_duration(duration, message)
       Sequel::Database.query_time.value = Sequel::Database.query_time.value + duration
       Sequel::Database.query_count.value = Sequel::Database.query_count.value + 1
+      original_log_duration duration, message
     end
   end
 end
