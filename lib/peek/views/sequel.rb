@@ -22,7 +22,6 @@ module Sequel
     end
 
     def log_duration(duration, message)
-      puts "PEEK #{duration.inspect} #{self.object_id.inspect} #{Thread.current.object_id}"
       Sequel::Database.query_time.value = Sequel::Database.query_time.value + duration
       Sequel::Database.query_count.value = Sequel::Database.query_count.value + 1
     end
