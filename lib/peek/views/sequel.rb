@@ -9,7 +9,9 @@ module Sequel
     self.query_count = Concurrent::ThreadLocalVar.new(0)
 
     def log_connection_yield(sql, conn, args=nil)
-      sql = "#{connection_info(conn) if conn && log_connection_info}#{sql}#{"; #{args.inspect}" if args}"
+      unless @loggers.empty?
+        sql = "#{connection_info(conn) if conn && log_connection_info}#{sql}#{"; #{args.inspect}" if args}"
+      end
       start = Time.now
       begin
         yield
