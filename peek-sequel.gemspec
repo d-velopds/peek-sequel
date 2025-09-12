@@ -20,5 +20,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'peek'
   gem.add_dependency 'sequel', '~> 5.96', '>= 5.96.0'
-  gem.add_dependency 'concurrent-ruby', '~> 1.3', '>= 1.3.0'
+  gem.add_dependency 'concurrent-ruby', '1.3.4'
 end
