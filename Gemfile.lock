@@ -7,6 +7,14 @@ GIT
       concurrent-ruby (>= 0.9.0)
       railties (>= 4.0.0)
 
+PATH
+  remote: .
+  specs:
+    peek-sequel (0.1.0)
+      concurrent-ruby (= 1.3.4)
+      peek
+      sequel (~> 5.96, >= 5.96.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,7 +52,7 @@ GEM
     bigdecimal (3.2.3-java)
     builder (3.3.0)
     cgi (0.5.0-java)
-    concurrent-ruby (1.3.5)
+    concurrent-ruby (1.3.4)
     connection_pool (2.5.4)
     crass (1.0.6)
     date (3.4.1-java)
@@ -104,6 +112,8 @@ GEM
     reline (0.6.2)
       io-console (~> 0.5)
     securerandom (0.4.1)
+    sequel (5.96.0)
+      bigdecimal
     thor (1.4.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -115,6 +125,7 @@ PLATFORMS
 
 DEPENDENCIES
   peek!
+  peek-sequel!
   rake
 
 BUNDLED WITH
